@@ -96,14 +96,17 @@
 
 
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="about">
-<meta property="og:url" content="http://yoursite.com/about/index.html">
+  <meta name="description" content="CRF概率模型朴素贝叶斯朴素贝叶斯算法是一个用来分类的生成式模型，也可以说是一种概率模型。找出联合概率分布，然后通过贝叶斯公式求出后验概率。假设所有的特征是条件独立分布(conditionally independent)的，是一种生成式模型。 隐马尔可夫模型（Hidden Markov Model）， 联合概率分布（joint probability distribution.）指的是包含多个条">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Conditional Random Fields论文阅读和理解">
+<meta property="og:url" content="http://yoursite.com/2019/04/22/nlp_crf/index.html">
 <meta property="og:site_name" content="luotong&#39;s blogs">
+<meta property="og:description" content="CRF概率模型朴素贝叶斯朴素贝叶斯算法是一个用来分类的生成式模型，也可以说是一种概率模型。找出联合概率分布，然后通过贝叶斯公式求出后验概率。假设所有的特征是条件独立分布(conditionally independent)的，是一种生成式模型。 隐马尔可夫模型（Hidden Markov Model）， 联合概率分布（joint probability distribution.）指的是包含多个条">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-04-27T08:00:04.461Z">
+<meta property="og:updated_time" content="2019-04-22T08:29:00.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="about">
+<meta name="twitter:title" content="Conditional Random Fields论文阅读和理解">
+<meta name="twitter:description" content="CRF概率模型朴素贝叶斯朴素贝叶斯算法是一个用来分类的生成式模型，也可以说是一种概率模型。找出联合概率分布，然后通过贝叶斯公式求出后验概率。假设所有的特征是条件独立分布(conditionally independent)的，是一种生成式模型。 隐马尔可夫模型（Hidden Markov Model）， 联合概率分布（joint probability distribution.）指的是包含多个条">
 
 
 
@@ -111,7 +114,7 @@
 
   
   
-  <link rel="canonical" href="http://yoursite.com/about/">
+  <link rel="canonical" href="http://yoursite.com/2019/04/22/nlp_crf/">
 
 
 
@@ -121,7 +124,7 @@
   };
 </script>
 
-  <title>about | luotong's blogs</title>
+  <title>Conditional Random Fields论文阅读和理解 | luotong's blogs</title>
   
 
 
@@ -224,7 +227,7 @@
         
         
           
-          <li class="menu-item menu-item-about menu-item-active">
+          <li class="menu-item menu-item-about">
 
     
     
@@ -346,73 +349,191 @@
           
             
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
-
           
           <div id="content" class="content">
             
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/22/nlp_crf/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="luotong">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="luotong's blogs">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-<h1 class="post-title" itemprop="name headline">about
-
-</h1>
-
-<div class="post-meta">
-  
-  
-
-
-
-</div>
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
+          <h1 class="post-title" itemprop="name headline">Conditional Random Fields论文阅读和理解
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-04-22 14:50:52 / 修改时间：16:29:00" itemprop="dateCreated datePublished" datetime="2019-04-22T14:50:52+08:00">2019-04-22</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
           
-        
-      </div>
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/NLP/" itemprop="url" rel="index"><span itemprop="name">NLP</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon">
+            <i class="fa fa-eye"></i>
+             阅读次数： 
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <h2 id="CRF"><a href="#CRF" class="headerlink" title="CRF"></a>CRF</h2><h3 id="概率模型"><a href="#概率模型" class="headerlink" title="概率模型"></a>概率模型</h3><h4 id="朴素贝叶斯"><a href="#朴素贝叶斯" class="headerlink" title="朴素贝叶斯"></a>朴素贝叶斯</h4><p>朴素贝叶斯算法是一个用来分类的生成式模型，也可以说是一种概率模型。找出联合概率分布，然后通过贝叶斯公式求出后验概率。<br>假设所有的特征是条件独立分布(conditionally independent)的，是一种生成式模型。</p>
+<h4 id="隐马尔可夫模型（Hidden-Markov-Model），"><a href="#隐马尔可夫模型（Hidden-Markov-Model），" class="headerlink" title="隐马尔可夫模型（Hidden Markov Model），"></a>隐马尔可夫模型（Hidden Markov Model），</h4><ul>
+<li>联合概率分布（joint probability distribution.）指的是包含多个条件且所有条件同时成立的概率，记作P(X=a,Y=b)或P(a,b)，有的书上也习惯记作P(ab)，但是这种记法个人不太习惯，所以下文采用以逗号分隔的记法。</li>
+</ul>
+<h4 id="Maximum-Entropy-Model-最大熵模型"><a href="#Maximum-Entropy-Model-最大熵模型" class="headerlink" title="Maximum Entropy Model(最大熵模型)"></a>Maximum Entropy Model(最大熵模型)</h4>
       
     </div>
-    
-
-
 
     
+
     
     
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/04/22/docker/" rel="prev" title="Docker介绍">
+                Docker介绍 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
   </div>
 
 
@@ -441,8 +562,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -632,6 +762,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#CRF"><span class="nav-number">1.</span> <span class="nav-text">CRF</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#概率模型"><span class="nav-number">1.1.</span> <span class="nav-text">概率模型</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#朴素贝叶斯"><span class="nav-number">1.1.1.</span> <span class="nav-text">朴素贝叶斯</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#隐马尔可夫模型（Hidden-Markov-Model），"><span class="nav-number">1.1.2.</span> <span class="nav-text">隐马尔可夫模型（Hidden Markov Model），</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Maximum-Entropy-Model-最大熵模型"><span class="nav-number">1.1.3.</span> <span class="nav-text">Maximum Entropy Model(最大熵模型)</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
