@@ -16,7 +16,7 @@
 
 <html class="theme-next pisces use-motion" lang="zh-CN">
 <head><meta name="generator" content="Hexo 3.8.0">
-  <meta charset="UTF-8">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
@@ -165,7 +165,7 @@
   .use-motion .logo-line-before i { left: initial; }
   .use-motion .logo-line-after i { right: initial; }
   </style>
-</noscript>
+</noscript><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
 </head>
 
@@ -176,7 +176,7 @@
     
   
 
-  <div class="container sidebar-position-left page-post-detail">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -483,6 +483,7 @@
         <p><img src="/images/docker/docker.png" alt="Docker"></p>
 <h3 id="1-Docker介绍"><a href="#1-Docker介绍" class="headerlink" title="1. Docker介绍"></a>1. Docker介绍</h3><p>Docker是一个开源的应用容器引擎，由DotCloud开源的，可以让开发人员随意的将其应用打包到一个容器中。基于Docker的沙箱环境可以实现轻型隔离，多个容器间不会相互影响；Dokcer可以允许应用程序在笔记本电脑、内部服务器、公有云、私有云等上允许，Docker可以自动化打包和部署任何应用，方便地创建一个轻量级私有PaaS云，也可以用于搭建开发测试环境以及部署可扩展的web应用等。</p>
 <h3 id="2-Docker和VM对比"><a href="#2-Docker和VM对比" class="headerlink" title="2. Docker和VM对比"></a>2. Docker和VM对比</h3><p>Docker的实现原理是虚拟化，但是却不同于VM，VM是在宿主机上运行一个完成的操作系统，会占用很多CPU、内存、硬盘等资源。但是Docker不同于VM，Docker的运行只包含应用程序和运行程序的一些依赖库，基于容器机制运行在宿主机器上，容器将应用程序服务或功能与所有库，配置文件，依赖项和其他必要部分进行打包，能够在几秒钟完成启动。与VM相比，Docker的优势包括高效的应用程序开发，更低的资源使用和更快的部署。<br><img src="/images/docker/VM-and-Docker.png" alt="VM和容器的对比"></p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -505,6 +506,7 @@
 </tr>
 </tbody>
 </table>
+</div>
 <h3 id="3-Docker架构"><a href="#3-Docker架构" class="headerlink" title="3. Docker架构"></a>3. Docker架构</h3><p>下面是一个使用Docker进行开发的架构图。<br><img src="/images/docker/Docker-Architecture.png" alt="Docker架构图"></p>
 <ul>
 <li><p>Docker Clinet(docker)，是允许使用REST API（http请求）在用户和Docker守护程序之间进行通信的接口。</p>
@@ -1329,7 +1331,24 @@
         onPopupClose();
       }
     });
-  </script>
+  </script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config("");
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
 
 
 
@@ -1340,6 +1359,13 @@
   
 
   
+  
+
+  
+  
+
+  
+
 
   
 

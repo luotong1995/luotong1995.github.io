@@ -16,7 +16,7 @@
 
 <html class="theme-next pisces use-motion" lang="zh-CN">
 <head><meta name="generator" content="Hexo 3.8.0">
-  <meta charset="UTF-8">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
@@ -157,7 +157,7 @@
   .use-motion .logo-line-before i { left: initial; }
   .use-motion .logo-line-after i { right: initial; }
   </style>
-</noscript>
+</noscript><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
 </head>
 
@@ -168,7 +168,7 @@
     
   
 
-  <div class="container sidebar-position-left 
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left 
   page-home">
     <div class="headband"></div>
 
@@ -538,7 +538,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/23/bayes-md/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/23/bayes/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="luotong">
@@ -558,7 +558,7 @@
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/2019/04/23/bayes-md/" class="post-title-link" itemprop="url">朴素贝叶斯算法</a>
+                <a href="/2019/04/23/bayes/" class="post-title-link" itemprop="url">朴素贝叶斯算法</a>
               
             
           </h1>
@@ -802,19 +802,20 @@
       
         
           
-            <h2 id="概率-Probability"><a href="#概率-Probability" class="headerlink" title="概率(Probability)"></a>概率(Probability)</h2><p>概率是对随机变量发生的可能性的度量，是一个在0–1之间的实数，概率也是一有严格的定义的是符合柯尔莫哥洛夫定理的数学对象。可以参考wikipedia<a href="https://en.wikipedia.org/wiki/Probability," title="概率" target="_blank" rel="noopener">概率</a></p>
+            <h2 id="概率-Probability"><a href="#概率-Probability" class="headerlink" title="概率(Probability)"></a>概率(Probability)</h2><p>概率是对随机变量发生的可能性的度量，是一个在[0-1]之间的实数，概率也是一有严格的定义的是符合柯尔莫哥洛夫定理的数学对象。可以参考wikipedia<a href="https://en.wikipedia.org/wiki/Probability," title="概率" target="_blank" rel="noopener">概率</a>。</p>
 <p>概率表示在给定$\theta$下随机变量$X=x$的可能性，可以用概率密度函数$f(x|\theta)$来表示，表示在给定$\theta$下$x$的概率密度，这里$x$表示随机变量$X$所取的值，即$X=x$。</p>
 <h2 id="似然-Likelihood"><a href="#似然-Likelihood" class="headerlink" title="似然(Likelihood)"></a>似然(Likelihood)</h2><p>似然也叫做似然函数，似然函数的表达式为$L(\theta|x)$，也是一个条件概率或者条件分布的形式，似然函数表示在已知随机变量$X=x$的条件下，估计参数$\theta$的值，所以似然函数是一个关于$\theta$的函数。</p>
-<h2 id="概率和似然的联系"><a href="#概率和似然的联系" class="headerlink" title="概率和似然的联系"></a>概率和似然的联系</h2><ul>
-<li>假设$X$式离散随机变量，则其概率密度函数$f(x|\theta)$可以写为$f(x|\theta)=\mathbb{P}_{ \theta }\left( X=x \right)$，表示在参数$\theta$下随机变量$X$取到值$x$的可能性。如果发现<br>$$L(\theta_1 | \textbf{x} ) = \mathbb{P}_{\theta_1}(\textbf{X} = \textbf{x}) &gt; \mathbb{P}_{\theta_2}(\textbf{X} = \textbf{x}) = L(\theta_2 | \textbf{x})$$</li>
+<h2 id="概率和似然的联系"><a href="#概率和似然的联系" class="headerlink" title="概率和似然的联系"></a>概率和似然的联系</h2><p>概率和似然是对于概率密度函数的不同角度的描述，都是表示事件发生的概率。</p>
+<ul>
+<li>假设$X$式离散随机变量，则其概率密度函数$f(x|\theta)$可以写为$f(x|\theta)=\mathbb{P}_{ \theta }\left( X=x \right)$，表示在参数$\theta$下随机变量$X$取到值$x$的可能性。如果发现<script type="math/tex; mode=display">L(\theta_1 | \textbf{x} ) = \mathbb{P}_{\theta_1}(\textbf{X} = \textbf{x}) > \mathbb{P}_{\theta_2}(\textbf{X} = \textbf{x}) = L(\theta_2 | \textbf{x})</script></li>
 </ul>
 <p>那么似然函数就得到如下推测：在参数$\theta_1$下随机向量$X$取到值$x$的可能性大于在参数$\theta_2$下随机向量$X$取到值$x$的可能性。换句话说，我们更有理由相信(相对于$\theta_2$来说)$\theta_1$，更有可能是真实值。(这里的可能性由概率来刻画)</p>
 <ul>
-<li>如果$X$是连续的随机向量，那么其密度函数$f(x|\theta)$本身（如果在$x$连续的话）在$x$处的概率为0，为了方便考虑一维情况：给定一个充分小$\epsilon &gt; 0$，那么随机变量X取值在$(x - \epsilon, x + \epsilon)$区间内的概率即为</li>
+<li>如果$X$是连续的随机向量，那么其密度函数$f(x|\theta)$本身（如果在$x$连续的话）在$x$处的概率为0，为了方便考虑一维情况：给定一个充分小$\epsilon &gt; 0$，那么随机变量X取值在$(x - \epsilon, x + \epsilon)$区间内的概率即为:</li>
 </ul>
-<p>$$\mathbb{P}<em>\theta(x - \epsilon &lt; X &lt; x + \epsilon) = \int</em>{x - \epsilon}^{x + \epsilon} f(x | \theta) dx \approx 2 \epsilon f(x | \theta) = 2 \epsilon L(\theta | x)$$</p>
-<p>综上，概率(密度)表达给定$\theta$下样本随机向量$X = x$的可能性，而似然表达了给定样本$X = x$下参数$\theta_1$(相对于另外的参数$\theta_2$)为真实值的可能性，由于该参数不是随机变量所以只能用可能性来描述，而不是用概率来描述。</p>
-
+<script type="math/tex; mode=display">\mathbb{P}_\theta(x - \epsilon < X < x + \epsilon) = \int_{x - \epsilon}^{x + \epsilon} f(x | \theta) dx \approx 2 \epsilon f(x | \theta) = 2 \epsilon L(\theta | x)</script><p>并且两个未知参数的情况下做比就能约掉$2\epsilon$，所以和离散情况下的理解一致，只是此时似然所表达的那种可能性和概率$f(x|\theta) = 0$无关。</p>
+<p>综上，概率(密度)表达给定$\theta$下样本随机向量$X = x$的可能性，而似然表达了给定样本$X = x$下参数$\theta_1$(相对于另外的参数$\theta_2$)为真实值的可能性，由于该参数不是随机变量所以只能用可能性来描述，而不是用概率来描述。其实$L(\theta|\textbf{x})$和$f(\textbf{x}|\theta)$是对于事件从两种角度进行分析，都是表示的事件发生的概率。$f(\textbf{x}|\theta)$表示对于给定的$\theta$条件下，$x$出现的可能性是多大。而$L(\theta|\textbf{x})$表示在给定样本x的时候，哪个$\theta$使得$x$出现的可能性是多大。</p>
+<h2 id="极大似然估计"><a href="#极大似然估计" class="headerlink" title="极大似然估计"></a>极大似然估计</h2>
           
         
       
@@ -1225,6 +1226,7 @@
             <p><img src="/images/docker/docker.png" alt="Docker"></p>
 <h3 id="1-Docker介绍"><a href="#1-Docker介绍" class="headerlink" title="1. Docker介绍"></a>1. Docker介绍</h3><p>Docker是一个开源的应用容器引擎，由DotCloud开源的，可以让开发人员随意的将其应用打包到一个容器中。基于Docker的沙箱环境可以实现轻型隔离，多个容器间不会相互影响；Dokcer可以允许应用程序在笔记本电脑、内部服务器、公有云、私有云等上允许，Docker可以自动化打包和部署任何应用，方便地创建一个轻量级私有PaaS云，也可以用于搭建开发测试环境以及部署可扩展的web应用等。</p>
 <h3 id="2-Docker和VM对比"><a href="#2-Docker和VM对比" class="headerlink" title="2. Docker和VM对比"></a>2. Docker和VM对比</h3><p>Docker的实现原理是虚拟化，但是却不同于VM，VM是在宿主机上运行一个完成的操作系统，会占用很多CPU、内存、硬盘等资源。但是Docker不同于VM，Docker的运行只包含应用程序和运行程序的一些依赖库，基于容器机制运行在宿主机器上，容器将应用程序服务或功能与所有库，配置文件，依赖项和其他必要部分进行打包，能够在几秒钟完成启动。与VM相比，Docker的优势包括高效的应用程序开发，更低的资源使用和更快的部署。<br><img src="/images/docker/VM-and-Docker.png" alt="VM和容器的对比"></p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -1247,6 +1249,7 @@
 </tr>
 </tbody>
 </table>
+</div>
 <h3 id="3-Docker架构"><a href="#3-Docker架构" class="headerlink" title="3. Docker架构"></a>3. Docker架构</h3><p>下面是一个使用Docker进行开发的架构图。<br><img src="/images/docker/Docker-Architecture.png" alt="Docker架构图"></p>
 <ul>
 <li><p>Docker Clinet(docker)，是允许使用REST API（http请求）在用户和Docker守护程序之间进行通信的接口。</p>
@@ -2195,6 +2198,86 @@
   
 
   
+  
+
+  
+  
+    
+      
+    
+      
+    
+      
+        
+      
+    
+      
+    
+      
+    
+      
+    
+  
+
+  
+    
+      <script type="text/x-mathjax-config">
+  
+
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$', '$'], ['\\(', '\\)'] ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      
+      equationNumbers: {
+        autoNumber: 'AMS'
+      }
+    }
+  });
+  MathJax.Hub.Register.StartupHook('TeX Jax Ready', function() {
+    MathJax.InputJax.TeX.prefilterHooks.Add(function(data) {
+      if (data.display) {
+        var next = data.script.nextSibling;
+        while (next && next.nodeName.toLowerCase() === '#text') { next = next.nextSibling }
+        if (next && next.nodeName.toLowerCase() === 'br') { next.parentNode.removeChild(next) }
+      }
+    });
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for (i = 0; i < all.length; i += 1) {
+      document.getElementById(all[i].inputID + '-Frame').parentNode.className += ' has-jax';
+    }
+  });
+</script>
+<script src="//cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config("");
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
+
+    
+  
+
 
   
 
