@@ -482,8 +482,19 @@
       
         
           
-            
+            <p>
+              
+              
+            </p>
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/04/26/uwsgi/" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
@@ -642,8 +653,19 @@
       
         
           
-            <h2 id="贝叶斯公式"><a href="#贝叶斯公式" class="headerlink" title="贝叶斯公式"></a>贝叶斯公式</h2><h3 id="先验概率"><a href="#先验概率" class="headerlink" title="先验概率"></a>先验概率</h3><h3 id="后验概率"><a href="#后验概率" class="headerlink" title="后验概率"></a>后验概率</h3><h3 id="公式"><a href="#公式" class="headerlink" title="公式"></a>公式</h3>
+            <p>
+              贝叶斯公式先验概率后验概率公式
+              
+            </p>
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/04/23/bayes/" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
@@ -802,37 +824,21 @@
       
         
           
-            <h2 id="概率-Probability"><a href="#概率-Probability" class="headerlink" title="概率(Probability)"></a>概率(Probability)</h2><p>概率是对随机变量发生的可能性的度量，是一个在[0-1]之间的实数，概率也是一有严格的定义的是符合柯尔莫哥洛夫定理的数学对象。可以参考wikipedia<a href="https://en.wikipedia.org/wiki/Probability," title="概率" target="_blank" rel="noopener">概率</a>。</p>
-<p>概率表示在给定$\theta$下随机变量$X=x$的可能性，可以用概率密度函数$f(x|\theta)$来表示，表示在给定$\theta$下$x$的概率密度，这里$x$表示随机变量$X$所取的值，即$X=x$。</p>
-<h2 id="似然-Likelihood"><a href="#似然-Likelihood" class="headerlink" title="似然(Likelihood)"></a>似然(Likelihood)</h2><p>似然也叫做似然函数，似然函数的表达式为$L(\theta|x)$，也是一个条件概率或者条件分布的形式，似然函数表示在已知随机变量$X=x$的条件下，估计参数$\theta$的值，所以似然函数是一个关于$\theta$的函数。</p>
-<h2 id="概率和似然的联系"><a href="#概率和似然的联系" class="headerlink" title="概率和似然的联系"></a>概率和似然的联系</h2><p>概率和似然是对于概率密度函数的不同角度的描述，都是表示事件发生的概率。</p>
-<ul>
-<li>假设$X$式离散随机变量，则其概率密度函数$f(x|\theta)$可以写为$f(x|\theta)=\mathbb{P}_{ \theta }\left( X=x \right)$，表示在参数$\theta$下随机变量$X$取到值$x$的可能性。如果发现<script type="math/tex; mode=display">L(\theta_1 | \textbf{x} ) = \mathbb{P}_{\theta_1}(\textbf{X} = \textbf{x}) > \mathbb{P}_{\theta_2}(\textbf{X} = \textbf{x}) = L(\theta_2 | \textbf{x})</script></li>
-</ul>
-<p>那么似然函数就得到如下推测：在参数$\theta_1$下随机向量$X$取到值$x$的可能性大于在参数$\theta_2$下随机向量$X$取到值$x$的可能性。换句话说，我们更有理由相信(相对于$\theta_2$来说)$\theta_1$，更有可能是真实值。(这里的可能性由概率来刻画)</p>
-<ul>
-<li>如果$X$是连续的随机向量，那么其密度函数$f(x|\theta)$本身（如果在$x$连续的话）在$x$处的概率为0，为了方便考虑一维情况：给定一个充分小$\epsilon &gt; 0$，那么随机变量X取值在$(x - \epsilon, x + \epsilon)$区间内的概率即为:</li>
-</ul>
-<script type="math/tex; mode=display">\mathbb{P}_\theta(x - \epsilon < X < x + \epsilon) = \int_{x - \epsilon}^{x + \epsilon} f(x | \theta) dx \approx 2 \epsilon f(x | \theta) = 2 \epsilon L(\theta | x)</script><p>并且两个未知参数的情况下做比就能约掉$2\epsilon$，所以和离散情况下的理解一致，只是此时似然所表达的那种可能性和概率$f(x|\theta) = 0$无关。</p>
-<p>综上，概率(密度)表达给定$\theta$下样本随机向量$X = x$的可能性，而似然表达了给定样本$X = x$下参数$\theta_1$(相对于另外的参数$\theta_2$)为真实值的可能性，由于该参数不是随机变量所以只能用可能性来描述，而不是用概率来描述。其实$L(\theta|\textbf{x})$和$f(\textbf{x}|\theta)$是对于事件从两种角度进行分析，都是表示的事件发生的概率。$f(\textbf{x}|\theta)$表示对于给定的$\theta$条件下，$x$出现的可能性是多大。而$L(\theta|\textbf{x})$表示在给定样本x的时候，哪个$\theta$使得$x$出现的可能性是多大。</p>
-<h2 id="极大似然估计-Maximum-Likelihood-Estimation-MLE"><a href="#极大似然估计-Maximum-Likelihood-Estimation-MLE" class="headerlink" title="极大似然估计(Maximum Likelihood Estimation, MLE)"></a>极大似然估计(Maximum Likelihood Estimation, MLE)</h2><p>在统计学中，极大似然估计是一种估计统计模型参数的方法，意思就是根据样本数据估计模型参数的方法。按照字面意思就是找出参数$\theta$来似然函数$L(\theta|\textbf{x})$最大，其中使得其最大的参数$\hat {\theta}$就是极大似然估计，可以由如下表达式表示：</p>
-<script type="math/tex; mode=display">{\displaystyle {\hat {\theta \,}}\in \{\underset {\theta \in \Theta }{\operatorname {arg\,max} }\ {\mathcal {L}}(\theta \,;x)\}}</script><p>通常情况下对于使用对数似然进行求解，因为对数似然是一个严格递增函数</p>
-<script type="math/tex; mode=display">{\displaystyle \ell (\theta \,;x)=\ln {\mathcal {L}}(\theta \,;x)}</script><h3 id="求解过程"><a href="#求解过程" class="headerlink" title="求解过程"></a>求解过程</h3><p>假设$X$是独立同分布的数据，已知$X$的数据集大小为$m$，则似然函数可以有如下描述：</p>
-<script type="math/tex; mode=display">L(\theta|x)=f(x|\theta)=f(x_1,x_2,...,x_m|\theta)=\prod _{ i=1 }^{ m }{f\left( X={ x }_{ i }|\theta\right)}</script><p>使用对数似然进行求解，将乘积转化为求和</p>
-<script type="math/tex; mode=display">\log{L(\theta|x)}=\sum_{ i=1 }^{ m }{\log{f\left( X={ x }_{ i }|\theta\right)}}</script><p>则极大似然估计为：</p>
-<script type="math/tex; mode=display">{\displaystyle {\hat {\theta \,}}\in \{\underset {\theta \in \Theta }{\operatorname {arg\,max} }\ \log{L(\theta|x)}\}}=\{\underset {\theta \in \Theta }{\operatorname {arg\,max} }\sum_{ i=1 }^{ m }{\log{f\left( X={ x }_{ i }|\theta\right)}}\}</script><h3 id="极大似然估计举例说明"><a href="#极大似然估计举例说明" class="headerlink" title="极大似然估计举例说明"></a>极大似然估计举例说明</h3><h4 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h4><p>假设袋子里面有若干个球，里面只有黑球和白球两种，从里面放回的依次取出来10次，其中出来的7次是黑球、3次是白球，那么认为袋子里面黑球的比例为0.7。这个参数是通过极大似然估计求出来的。其实这是一个典型的二项分布，并且已知部分样本数据，可以根据极大似然估计求出二项分布的参数。假设二项分布黑球的概率为$p$，则白球的概率为$1-p$，可以得到似然函数为：</p>
-<script type="math/tex; mode=display">L(p|x)=\prod_{i=1}^{10}f\left(x_i|p\right)=p^7(1-p)^3</script><p>使用对数似然求出使得似然函数最大的参数$p$：</p>
-<script type="math/tex; mode=display">\log{L(p|x)}=\sum_{ i=1 }^{ 10 }{\log{f\left( X={ x }_{ i }|p\right)}}=7\log{p}+3\log{(1-p)}</script><p>对上面表达式求导得到：</p>
-<script type="math/tex; mode=display">L^{'}(p|x)=\frac { 7 }{ x } + \frac{3}{x-1}</script><p>令倒数等于零得到参数$p=0.7$即为极大似然估计的值。</p>
-<h3 id="先验概率-Prior-probability"><a href="#先验概率-Prior-probability" class="headerlink" title="先验概率(Prior probability)"></a>先验概率(Prior probability)</h3><p>先验概率就是根据现在目前的经验能够得到的最多的信息。下面举出两个例子作出解释。</p>
-<h4 id="投掷骰子"><a href="#投掷骰子" class="headerlink" title="投掷骰子"></a>投掷骰子</h4><p>比如说目前投掷一个骰子每一面向上的概率都是$\frac{1}{6}$，这就是一个先验证概率。</p>
-<h4 id="选水果"><a href="#选水果" class="headerlink" title="选水果"></a>选水果</h4><p>假设目前有两个盒子，一个红色的，一个蓝色的，红色盒子中有2个苹果6个橘子，蓝色盒子中有3个苹果和1个橘子。现在假定我们随机选择一个盒子，从这个盒子中我们随机选择一个水果，观察一下选择了哪种水果，然后放回盒子中。假设我们重复这个过程很多次。假设我们在40%的时间中选择红盒子，在60%的时间中选择蓝盒子，并且我们选择盒子中的水果时是等可能选择的。</p>
-<p>在这个例子中，我们要选择的盒子的颜色是一个随机变量，记作B。这个随机变量可以取两个值中的一个，即r(对应红盒子)或b(对应蓝盒子)。类似地，水果的种类也是一个随机变量，记作F。它可以取a(苹果)或者o(橘子)。我们把一个事件的概率定义为事件发生的次数与试验总数的比值，假设总试验次数趋于无穷，则$p(B= r)=\frac{4}{10} = \frac{2}{5}$和$p(B=b)=\frac{6}{10}=\frac{3}{5}$，现在有问题1:根据现在的条件如果选出的水果是橘子，那么这个水果最有可能出自于哪个盒子。</p>
-<p>在这个问题中选择盒子的概率$p(B)$即为先验概率，因为这个是已经知道的，选择红色的和蓝色的盒子的概率就是已知的。</p>
-<h3 id="后验概率-Posterior-probability"><a href="#后验概率-Posterior-probability" class="headerlink" title="后验概率(Posterior probability)"></a>后验概率(Posterior probability)</h3><p>后验概率是事件已经发生，要求这个事件发生的原因是由某个因素引起的可能性的大小。</p>
-<p>问题1中，在知道取出来的水果是橘子的时候，要求这个橘子是属于哪个盒子$p(B|F)$的时候就是在求一个后验概率，因为已经$F$事件已经发生。</p>
-<h3 id="最大后验概率估计-Maximum-a-Posteriori-estimation，MAP"><a href="#最大后验概率估计-Maximum-a-Posteriori-estimation，MAP" class="headerlink" title="最大后验概率估计(Maximum a Posteriori estimation，MAP)"></a>最大后验概率估计(Maximum a Posteriori estimation，MAP)</h3>
+            <p>
+              概率(Probability)概率是对随机变量发生的可能性的度量，是一个在[0-1]之间的实数，概率也是一有严格的定义的是符合柯尔莫哥洛夫定理的数学对象。可以参考wikipedia概率。
+概率表示在给定$\theta$下随机变量$X=x$的可能性，可以用概率密度函数$f(x|\theta)$来表示，表示在给定$\theta$下$x$的概率密度，这里$x$表示随机变量$X$所取的值，即$X=x$。
+
+              ...
+            </p>
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/04/23/likelihood-and-probability-md/" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
@@ -991,96 +997,22 @@
       
         
           
-            <p><img src="/images/docker/docker.png" alt="Docker"></p>
-<p>Docker作为一个开源的应用容器引擎，已经在各个平台上进行了支持其中包括Linux、Mac、Windows、AWS和Azure。在正常使用的过程中都是基于Linux的，下面简单介绍一些在Linux上的安装和使用。</p>
-<h2 id="Docker安装配置"><a href="#Docker安装配置" class="headerlink" title="Docker安装配置"></a>Docker安装配置</h2><p>Docker安装分为离线安装和在线安装，离线安装是基于二进制的方式进行安装。在线安装是根据不同的Linux环境进行安装。</p>
-<h3 id="离线安装"><a href="#离线安装" class="headerlink" title="离线安装"></a>离线安装</h3><p>如果需要在外网络环境下使用Docker，可以使用静态二进制文件进行安装，在需要进行升级的时候也使用二进制文件进行安装和升级。</p>
-<h4 id="首先下载Docker二进制文件"><a href="#首先下载Docker二进制文件" class="headerlink" title="首先下载Docker二进制文件"></a>首先下载Docker二进制文件</h4><p>进入如下网址选择自己想要的版本进行下载安装，<a href="https://download.docker.com/linux/static/stable/" title="Dokcer二进制文件下载地址" target="_blank" rel="noopener">Dokcer二进制文件下载地址</a>，在本博客中选择的是18.06版本进行安装使用。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@host_name ～] wget https://download.docker.com/linux/static/stable/x86_64/docker-18.06.0-ce.tgz</span><br></pre></td></tr></table></figure></p>
-<h4 id="安装Docker"><a href="#安装Docker" class="headerlink" title="安装Docker"></a>安装Docker</h4><ul>
-<li><p>解压上一步已经下载的Docker二进制文件</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 解压二进制文件压缩包</span></span><br><span class="line">[root@host_name ～] tar xzvf docker-18.06.0-ce.tgz</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>将解压完成之后的可执行二进制文件拷贝到/usr/bin目录</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 拷贝可运行的二进制文件到/usr/bin目录下</span></span><br><span class="line">[root@host_name ～] sudo cp docker/* /usr/bin</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>为Docker配置后台系统，在这里使用Linux的系统服务来完成Docker的后台启动</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 添加Docker到system service, 添加docker.service文件</span></span><br><span class="line">[root@host_name ~] vim /usr/lib/systemd/system/docker.service</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>在docker.service文件中添加如下内容</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">[Unit]</span><br><span class="line">Description=Docker Application Container Engine</span><br><span class="line">Documentation=https://docs.docker.com</span><br><span class="line">After=network-online.target firewalld.service</span><br><span class="line">Wants=network-online.target</span><br><span class="line"></span><br><span class="line">[Service]</span><br><span class="line">Type=notify</span><br><span class="line"><span class="comment"># the default is not to use systemd for cgroups because the delegate issues still</span></span><br><span class="line"><span class="comment"># exists and systemd currently does not support the cgroup feature set required</span></span><br><span class="line"><span class="comment"># for containers run by docker</span></span><br><span class="line">ExecStart=/usr/bin/dockerd</span><br><span class="line">ExecReload=/bin/<span class="built_in">kill</span> -s HUP <span class="variable">$MAINPID</span></span><br><span class="line"><span class="comment"># Having non-zero Limit*s causes performance problems due to accounting overhead</span></span><br><span class="line"><span class="comment"># in the kernel. We recommend using cgroups to do container-local accounting.</span></span><br><span class="line">LimitNOFILE=infinity</span><br><span class="line">LimitNPROC=infinity</span><br><span class="line">LimitCORE=infinity</span><br><span class="line"><span class="comment"># Uncomment TasksMax if your systemd version supports it.</span></span><br><span class="line"><span class="comment"># Only systemd 226 and above support this version.</span></span><br><span class="line"><span class="comment">#TasksMax=infinity</span></span><br><span class="line">TimeoutStartSec=0</span><br><span class="line"><span class="comment"># set delegate yes so that systemd does not reset the cgroups of docker containers</span></span><br><span class="line">Delegate=yes</span><br><span class="line"><span class="comment"># kill only the docker process, not all processes in the cgroup</span></span><br><span class="line">KillMode=process</span><br><span class="line"><span class="comment"># restart the docker process if it exits prematurely</span></span><br><span class="line">Restart=on-failure</span><br><span class="line">StartLimitBurst=3</span><br><span class="line">StartLimitInterval=60s</span><br><span class="line"></span><br><span class="line">[Install]</span><br><span class="line">WantedBy=multi-user.target</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>启动Docker服务</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 启动Docker</span></span><br><span class="line">[root@host_name ~] systemctl start docker.service</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>停止Docker服务</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 停止Docker</span></span><br><span class="line">[root@host_name ~] systemctl stop docker.service</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>重启Docker服务</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 重启Docker</span></span><br><span class="line">[root@host_name ~] systemctl restart docker.service</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h4 id="根据需要添加私有镜像库"><a href="#根据需要添加私有镜像库" class="headerlink" title="根据需要添加私有镜像库"></a>根据需要添加私有镜像库</h4><p>Docker私有镜像库是一个用来存储已经创建好的镜像的地方，Harbor是目前得到广泛使用的镜像库，接下来也会介绍一下Harbor的安装和使用。下面就是进行私有镜像库配置的过程。</p>
-<ul>
-<li><p>修改docker启动文件, 可以根据需要添加镜像库的ip地址，下面的bash命令中的ip应改为已经存在的私有镜像库的ip地址</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@host_name ~] vim /usr/lib/systemd/system/docker.service</span><br><span class="line">ExecStart=/usr/bin/dockerd --insecure-registry &lt;ip1&gt; --insecure-registry &lt;ip2&gt;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>修改完成之后重新启动Docker</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@host_name ~] systemctl daemon-reload</span><br><span class="line">[root@host_name ~] systemctl restart docker.service</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h3 id="在线安装"><a href="#在线安装" class="headerlink" title="在线安装"></a>在线安装</h3><p>Docker的在线安装在不同平台下的Linux方式有所不同，Ubuntu、CentOS、Debian、Fedora，详细信息可以参考，<a href="https://docs.docker.com/install/linux/docker-ce/centos/," title="Linux安装Docker" target="_blank" rel="noopener">Linux安装Docker</a>，下面介绍一下Ubuntu的安装过程。</p>
-<h4 id="卸载老版本（如果存在）"><a href="#卸载老版本（如果存在）" class="headerlink" title="卸载老版本（如果存在）"></a>卸载老版本（如果存在）</h4><p>卸载老版本Docker<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@host_name ~] sudo apt-get remove docker docker-engine docker.io containerd runc</span><br></pre></td></tr></table></figure></p>
-<h4 id="设置Docker官方版本库"><a href="#设置Docker官方版本库" class="headerlink" title="设置Docker官方版本库"></a>设置Docker官方版本库</h4><ul>
-<li><p>更新apt-get库</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@host_name ~] sudo apt-get update</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>安装设置版本库所需要的库</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[root@host_name ~] sudo apt-get install \</span><br><span class="line">    apt-transport-https \</span><br><span class="line">    ca-certificates \</span><br><span class="line">    curl \</span><br><span class="line">    gnupg-agent \</span><br><span class="line">    software-properties-common</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>添加Docker官方gpg</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@host_name ~] curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>设置Docker版本库</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[root@host_name ~] sudo add-apt-repository \</span><br><span class="line">   <span class="string">"deb [arch=amd64] https://download.docker.com/linux/ubuntu \</span></span><br><span class="line"><span class="string">   <span class="variable">$(lsb_release -cs)</span> \</span></span><br><span class="line"><span class="string">   stable"</span></span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h4 id="安装Docker-1"><a href="#安装Docker-1" class="headerlink" title="安装Docker"></a>安装Docker</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@host_name ~] sudo apt-get update</span><br><span class="line">[root@host_name ~] sudo apt-get install docker-ce</span><br></pre></td></tr></table></figure>
-<h2 id="安装Harbor"><a href="#安装Harbor" class="headerlink" title="安装Harbor"></a>安装Harbor</h2><p>Harbor是一个用于存储和分发Docker镜像的企业级Registry服务器，harbor的镜像存储使用的是官方的docker registry服务去完成，harbor的功能是在此之上提供用户权限管理、镜像复制等功能，提高使用的registry的效率，所以说Harbor给用户提供了用户权限管理、项目管理和镜像复制等功能。</p>
-<h3 id="安装docker-compose"><a href="#安装docker-compose" class="headerlink" title="安装docker-compose"></a>安装docker-compose</h3><ul>
-<li><p>下载docker-compose二进制文件</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@host_name ~] sudo curl -L <span class="string">"https://github.com/docker/compose/releases/download/1.22.0/docker-compose-<span class="variable">$(uname -s)</span>-<span class="variable">$(uname -m)</span>"</span> -o /usr/<span class="built_in">local</span>/bin/docker-compose</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>添加可执行权限</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@host_name ~] sudo chmod +x /usr/<span class="built_in">local</span>/bin/docker-compose</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h3 id="下载Harbor并安装"><a href="#下载Harbor并安装" class="headerlink" title="下载Harbor并安装"></a>下载Harbor并安装</h3><ul>
-<li><p>下载Harbor离线安装文件</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@host_name ~] wget https://storage.googleapis.com/harbor-releases/release-1.6.0/harbor-offline-installer-v1.6.0.tgz</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>解压</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@host_name ~] tar xvf harbor-offline-installer-v1.6.0.tgz</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>修改Harbor配置文件</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[root@host_name ~] vim harbor.cfg</span><br><span class="line"><span class="comment"># 修改下面两项内容</span></span><br><span class="line">hostname = 9.111.215.134</span><br><span class="line">harbor_admin_password = Password</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>安装Harbor</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># --with-chartmuseum 是增加helm-chart的管理功能</span></span><br><span class="line">[root@host_name ~] sudo ./install.sh --with-chartmuseum</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h3 id="Harbor使用命令"><a href="#Harbor使用命令" class="headerlink" title="Harbor使用命令"></a>Harbor使用命令</h3><ul>
-<li><p>停止Harbor</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@host_name ~] docker-compose stop</span><br><span class="line">[root@host_name ~] docker-compose down -v</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>重启Harbor</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@host_name ~] docker-compose start</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>删除Harbor数据</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@host_name ~] rm -r /data/database</span><br><span class="line">[root@host_name ~] rm -r /data/registry</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h3 id="Docker-build"><a href="#Docker-build" class="headerlink" title="Docker build"></a>Docker build</h3>
+            <p>
+              
+Docker作为一个开源的应用容器引擎，已经在各个平台上进行了支持其中包括Linux、Mac、Windows、AWS和Azure。在正常使用的过程中都是基于Linux的，下面简单介绍一些在Linux上的安装和使用。
+Docker安装配置Docker安装分为离线安装和在线安装，离线安装是基于二进制的方式进行安装。在线安装是根据不同的Linux环境进行安装。
+离线安装如果需要在外网络环境下使用Doc
+              ...
+            </p>
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/04/22/docker_install_and_use/" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
@@ -1239,56 +1171,20 @@
       
         
           
-            <p><img src="/images/docker/docker.png" alt="Docker"></p>
-<h3 id="1-Docker介绍"><a href="#1-Docker介绍" class="headerlink" title="1. Docker介绍"></a>1. Docker介绍</h3><p>Docker是一个开源的应用容器引擎，由DotCloud开源的，可以让开发人员随意的将其应用打包到一个容器中。基于Docker的沙箱环境可以实现轻型隔离，多个容器间不会相互影响；Dokcer可以允许应用程序在笔记本电脑、内部服务器、公有云、私有云等上允许，Docker可以自动化打包和部署任何应用，方便地创建一个轻量级私有PaaS云，也可以用于搭建开发测试环境以及部署可扩展的web应用等。</p>
-<h3 id="2-Docker和VM对比"><a href="#2-Docker和VM对比" class="headerlink" title="2. Docker和VM对比"></a>2. Docker和VM对比</h3><p>Docker的实现原理是虚拟化，但是却不同于VM，VM是在宿主机上运行一个完成的操作系统，会占用很多CPU、内存、硬盘等资源。但是Docker不同于VM，Docker的运行只包含应用程序和运行程序的一些依赖库，基于容器机制运行在宿主机器上，容器将应用程序服务或功能与所有库，配置文件，依赖项和其他必要部分进行打包，能够在几秒钟完成启动。与VM相比，Docker的优势包括高效的应用程序开发，更低的资源使用和更快的部署。<br><img src="/images/docker/VM-and-Docker.png" alt="VM和容器的对比"></p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th>VM</th>
-<th>容器</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>应用程序需要操作系统的完整实例</td>
-<td>应用程序与服务器共享操作系统，因此启动/关闭非常快</td>
-</tr>
-<tr>
-<td>Hypervisor管理虚拟分区，有助于提高计算性能，但是它有些庞大</td>
-<td>Docker守护程序使用Docker API或命令行监视和控制容器</td>
-</tr>
-<tr>
-<td>通过管理程序执行运行的进程会导致开销</td>
-<td>进程在服务器上以本机方式运行，从而实现低CPU /内存开销</td>
-</tr>
-</tbody>
-</table>
-</div>
-<h3 id="3-Docker架构"><a href="#3-Docker架构" class="headerlink" title="3. Docker架构"></a>3. Docker架构</h3><p>下面是一个使用Docker进行开发的架构图。<br><img src="/images/docker/Docker-Architecture.png" alt="Docker架构图"></p>
-<ul>
-<li><p>Docker Clinet(docker)，是允许使用REST API（http请求）在用户和Docker守护程序之间进行通信的接口。</p>
-</li>
-<li><p>Docker daemon(docker),在主机上运行，处理服务请求（例如，构建和存储映像，创建，运行和监视容器）。</p>
-</li>
-<li><p>Docker registry，是具有公共和私有访问权限的Docker容器映像的备份，是一个存储库，包括Harbor等。</p>
-</li>
-<li><p>Docker file，包含构建Docker镜像的说明，就是构建镜像的必要文件，也是主要依赖和编写的文件。</p>
-</li>
-<li><p>Docker image，是一个只读模板，其中包含用于创建Docker容器的指令/说明（当构建映像时，它将作为容器生效）。</p>
-</li>
-<li><p>Docker container，正在运行应用程序。可以有多个容器基于同一镜像运行。 可以使用Docker API或命令行创建，启动，停止，移动或删除。</p>
-</li>
-</ul>
-<p>同样重要的是要注意Docker使用以下操作系统功能：</p>
-<ul>
-<li>Namespace，命名空间确保在容器中运行的进程无法查看或影响在容器外部运行的进程。</li>
-<li>Control Groups，用于资源管理和控制</li>
-<li>UnionFS (FileSystem)，用于进行文件管理，是Linux中将不同的物理地址的目录挂载在一起的一种方法</li>
-</ul>
-
+            <p>
+              
+1. Docker介绍Docker是一个开源的应用容器引擎，由DotCloud开源的，可以让开发人员随意的将其应用打包到一个容器中。基于Docker的沙箱环境可以实现轻型隔离，多个容器间不会相互影响；Dokcer可以允许应用程序在笔记本电脑、内部服务器、公有云、私有云等上允许，Docker可以自动化打包和部署任何应用，方便地创建一个轻量级私有PaaS云，也可以用于搭建开发测试环境以及部署可扩展的
+              ...
+            </p>
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/04/22/docker/" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
@@ -1447,12 +1343,21 @@
       
         
           
-            <h2 id="CRF"><a href="#CRF" class="headerlink" title="CRF"></a>CRF</h2><h3 id="概率模型"><a href="#概率模型" class="headerlink" title="概率模型"></a>概率模型</h3><h4 id="朴素贝叶斯"><a href="#朴素贝叶斯" class="headerlink" title="朴素贝叶斯"></a>朴素贝叶斯</h4><p>朴素贝叶斯算法是一个用来分类的生成式模型，也可以说是一种概率模型。找出联合概率分布，然后通过贝叶斯公式求出后验概率。<br>假设所有的特征是条件独立分布(conditionally independent)的，是一种生成式模型。</p>
-<h4 id="隐马尔可夫模型（Hidden-Markov-Model），"><a href="#隐马尔可夫模型（Hidden-Markov-Model），" class="headerlink" title="隐马尔可夫模型（Hidden Markov Model），"></a>隐马尔可夫模型（Hidden Markov Model），</h4><ul>
-<li>联合概率分布（joint probability distribution.）指的是包含多个条件且所有条件同时成立的概率，记作P(X=a,Y=b)或P(a,b)，有的书上也习惯记作P(ab)，但是这种记法个人不太习惯，所以下文采用以逗号分隔的记法。</li>
-</ul>
-<h4 id="Maximum-Entropy-Model-最大熵模型"><a href="#Maximum-Entropy-Model-最大熵模型" class="headerlink" title="Maximum Entropy Model(最大熵模型)"></a>Maximum Entropy Model(最大熵模型)</h4>
+            <p>
+              CRF概率模型朴素贝叶斯朴素贝叶斯算法是一个用来分类的生成式模型，也可以说是一种概率模型。找出联合概率分布，然后通过贝叶斯公式求出后验概率。假设所有的特征是条件独立分布(conditionally independent)的，是一种生成式模型。
+隐马尔可夫模型（Hidden Markov Model），
+联合概率分布（joint probability distribution.）指的是包含多个条
+              ...
+            </p>
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/04/22/nlp_crf/" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
