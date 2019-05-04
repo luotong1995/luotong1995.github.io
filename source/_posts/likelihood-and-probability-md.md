@@ -1,5 +1,5 @@
 ---
-title: 似然、概率、极大似然估计、先验概率、后验概率、贝叶斯公式
+title: 似然、概率、极大似然估计、先验概率、后验概率、最大后验概率
 date: 2019-04-23 19:50:52
 tags:
 categories: 机器学习
@@ -33,7 +33,7 @@ $$\mathbb{P}_\theta(x - \epsilon < X < x + \epsilon) = \int_{x - \epsilon}^{x + 
 
 ## 极大似然估计(Maximum Likelihood Estimation, MLE)
 在统计学中，极大似然估计是一种估计统计模型参数的方法，意思就是根据样本数据估计模型参数的方法。按照字面意思就是找出参数$\theta$来似然函数$L(\theta|\textbf{x})$最大，其中使得其最大的参数$\hat {\theta}$就是极大似然估计，可以由如下表达式表示：
-$${\displaystyle {\hat {\theta \,}}\in \{{\underset {\theta \in \Theta }{\operatorname {arg\,max} }}\ {\mathcal {L}}(\theta \,;x)\}}$$
+$${\displaystyle {\hat {\theta \,}}\in \{\underset {\theta \in \Theta }{\operatorname {arg\,max} }\ {\mathcal {L}}(\theta \,;x)\}}$$
 
 通常情况下对于使用对数似然进行求解，因为对数似然是一个严格递增函数
 $${\displaystyle \ell (\theta \,;x)=\ln {\mathcal {L}}(\theta \,;x)}$$
@@ -43,7 +43,7 @@ $$L(\theta|x)=f(x|\theta)=f(x_1,x_2,...,x_m|\theta)=\prod _{ i=1 }^{ m }{f\left(
 使用对数似然进行求解，将乘积转化为求和
 $$\log{L(\theta|x)}=\sum_{ i=1 }^{ m }{\log{f\left( X={ x }_{ i }|\theta\right)}}$$
 则极大似然估计为：
-$${\displaystyle {\hat {\theta \,}}\in \{{\underset {\theta \in \Theta }{\operatorname {arg\,max} }}\ \log{L(\theta|x)}\}}=\{{\underset {\theta \in \Theta }{\operatorname {arg\,max} }}\sum_{ i=1 }^{ m }{\log{f\left( X={ x }_{ i }|\theta\right)}}\}$$
+$${\displaystyle {\hat {\theta \,}}\in \{\underset {\theta \in \Theta }{\operatorname {arg\,max} }\ \log{L(\theta|x)}\}}=\{\underset {\theta \in \Theta }{\operatorname {arg\,max} }\sum_{ i=1 }^{ m }{\log{f\left( X={ x }_{ i }|\theta\right)}}\}$$
 
 ### 极大似然估计举例说明
 #### 例子
