@@ -85,7 +85,7 @@ $$P(\theta|X) = \frac{P(X|\theta)P(\theta)}{P(X)}$$
 
 其中$P(X|\theta)$为似然函数，假设随机变量$\theta$的概率密度函数为$g(\theta)$，由于随机变量$X$是一个已经发生的事件，现在$P(X)$中的值不受$\theta$的影响，所以$P(X)$所以这个后验概率的求解过程不受$P(X)$的影响。所以使用概率密度函数的方式可以得到:
 
-$${ \hat { \theta } }_{MAP}(x) \ \  ={\underset{\theta}{arg\,max}}P(\theta \mid X)\\ \qquad \qquad= { \underset { \theta  }{ { arg\, max} } }f(\theta \mid x) \\ \ \ \  \qquad \qquad \qquad \qquad = { \underset { \theta  }{ { arg\, max } }  }{ \frac { f(x\mid \theta )\, g(\theta ) }{ \int _{ \Theta } f(x\mid \vartheta )\, g(\vartheta )\  d\vartheta }} \\ \qquad \qquad \qquad= {{ \underset { \theta  }{ { arg\, max } }  }f(x\mid \theta )\, g(\theta )} $$
+$${ \hat { \theta } }_{MAP}(x) \ \  ={\underset{\theta}{arg\,max}}P(\theta \mid X)\\ \qquad \qquad= { \underset { \theta  }{ { arg\, max} } }f(\theta \mid x) \\ \ \ \  \qquad \qquad \qquad \qquad = { \underset { \theta  }{ { arg\, max } }  }{ \frac { f(x\mid \theta )\, g(\theta ) }{ \int _{ \Theta } f(x\mid \vartheta )\, g(\vartheta )\  d\vartheta }} \\ \qquad \qquad \qquad= { \underset {\theta  }{ { arg\, max } }f(x\mid \theta )\, g(\theta )} $$
 
 最大后验概率的做法可以认为极大似然估计乘上一个先验证概率，也就是相当于做了一个乘法的正则化。但是当一个随机变量的样本数量接近无数次，则最大后验概率的结果会更加接近极大似然估计的值。
 
